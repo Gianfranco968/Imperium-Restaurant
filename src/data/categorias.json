@@ -1,0 +1,189 @@
+[
+    {
+      "titulo": "Entradas",
+      "lado": "izq",
+      "productos": [
+        {
+          "titulo": "Bruschetta",
+          "descripcion": "Pan crujiente con tomate, albahaca y ajo.",
+          "ingredientes": "Pan, tomate, albahaca, ajo, aceite de oliva.",
+          "alergenos": "Gluten",
+          "precio": "$35.000",
+          "img": "img/bruschetta.jpg"
+        },
+        {
+          "titulo": "Empanada de Carne",
+          "descripcion": "Empanada rellena de carne de res, cebolla y especias.",
+          "ingredientes": "Carne de res, cebolla, masa de empanada, especias.",
+          "alergenos": "Gluten",
+          "precio": "$5.000",
+          "img": "img/empanada.jpg"
+        },
+        {
+          "titulo": "Tapas Variadas",
+          "descripcion": "Selección de tapas españolas acompañadas de salsas.",
+          "ingredientes": "Aceitunas, jamón, queso, pan, salsa alioli.",
+          "alergenos": "Gluten, lactosa",
+          "precio": "$28.000",
+          "img": "img/tapas.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Ensaladas",
+      "lado": "der",
+      "productos": [
+        {
+          "titulo": "Ensalada César",
+          "descripcion": "Lechuga fresca con aderezo césar y crutones.",
+          "ingredientes": "Lechuga, pollo, queso parmesano, crutones, aderezo césar.",
+          "alergenos": "Lactosa, gluten",
+          "precio": "$22.000",
+          "img": "img/ensalada-cesar.jpg"
+        },
+        {
+          "titulo": "Ensalada Griega",
+          "descripcion": "Tomate, pepino, cebolla morada, aceitunas y queso feta.",
+          "ingredientes": "Tomate, pepino, cebolla morada, aceitunas, queso feta.",
+          "alergenos": "Lactosa",
+          "precio": "$17.000",
+          "img": "img/ensalada-griega.jpg"
+        },
+        {
+          "titulo": "Ensalada de Rúcula",
+          "descripcion": "Rúcula, tomate cherry y vinagreta de mostaza.",
+          "ingredientes": "Rúcula, tomate cherry, mostaza, aceite de oliva.",
+          "alergenos": "Ninguno",
+          "precio": "$18.000",
+          "img": "img/ensalada-rucula.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Platos Principales",
+      "lado": "izq",
+      "productos": [
+        {
+          "titulo": "Solomillo a la parrilla",
+          "descripcion": "Jugoso solomillo acompañado de papas rústicas.",
+          "ingredientes": "Solomillo de res, papas, especias.",
+          "alergenos": "Ninguno",
+          "precio": "$33.500",
+          "img": "img/solomillo.jpg"
+        },
+        {
+          "titulo": "Bife de Chorizo",
+          "descripcion": "Bife de chorizo a la parrilla acompañado de vegetales.",
+          "ingredientes": "Bife de chorizo, zanahoria, brócoli, papas.",
+          "alergenos": "Ninguno",
+          "precio": "$36.500",
+          "img": "img/bife.jpg"
+        },
+        {
+          "titulo": "Suprema de Pollo en Salsa de Mostaza y Miel",
+          "descripcion": "Suprema de pollo a la plancha bañada en salsa de mostaza y miel.",
+          "ingredientes": "Pechuga de pollo, mostaza, miel, crema, papas, espárragos, manteca.",
+          "alergenos": "Lácteos",
+          "precio": "$27.000",
+          "img": "img/suprema.jpg"
+        },
+        {
+          "titulo": "Filete de salmón con arroz basmati",
+          "descripcion": "Salmón, sésamo, arroz basmati, zanahoria, morrón, cebolla, salsa teriyaki.",
+          "ingredientes": "Pechuga de pollo, mostaza, miel, crema, papas, espárragos, manteca.",
+          "alergenos": "Pescado, sésamo, soja",
+          "precio": "$38.000",
+          "img": "img/salmon.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Pastas",
+      "lado": "der",
+      "productos": [
+        {
+          "titulo": "Spaghetti Carbonara",
+          "descripcion": "Pasta con salsa cremosa de huevo y panceta.",
+          "ingredientes": "Pasta, huevo, panceta, queso parmesano.",
+          "alergenos": "Gluten, lactosa",
+          "precio": "$33.500",
+          "img": "img/carbonara.jpg"
+        },
+        {
+          "titulo": "Lasaña",
+          "descripcion": "Lasaña casera con carne molida y salsa bechamel.",
+          "ingredientes": "Carne molida, pasta, salsa bechamel, queso.",
+          "alergenos": "Gluten, lactosa",
+          "precio": "$35.000",
+          "img": "img/lasagna.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Postres",
+      "lado": "izq",
+      "productos": [
+        {
+          "titulo": "Tiramisú",
+          "descripcion": "Delicioso postre italiano con café y cacao.",
+          "ingredientes": "Mascarpone, café, bizcocho, cacao.",
+          "alergenos": "Gluten, lactosa",
+          "precio": "$17.000",
+          "img": "img/tiramisu.jpg"
+        },
+        {
+          "titulo": "Mousse de Chocolate",
+          "descripcion": "Suave mousse de chocolate amargo con crema.",
+          "ingredientes": "Chocolate, crema, azúcar.",
+          "alergenos": "Lactosa",
+          "precio": "$10.000",
+          "img": "img/mousse.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Bebidas Alcohólicas",
+      "lado": "der",
+      "productos": [
+        {
+          "titulo": "Vino Malbec",
+          "descripcion": "Vino tinto de uvas Malbec.",
+          "ingredientes": "Uvas Malbec.",
+          "alergenos": "Sulfitos",
+          "precio": "$11.000 (copa)",
+          "img": "img/vino-malbec.jpeg"
+        },
+        {
+          "titulo": "Cerveza Artesanal",
+          "descripcion": "Cerveza artesanal de estilo IPA.",
+          "ingredientes": "Cebada, lúpulo, agua, levadura.",
+          "alergenos": "Gluten",
+          "precio": "$9.000 (pinta)",
+          "img": "img/cerveza-artesanal.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Bebidas Sin Alcohol",
+      "lado": "izq",
+      "productos": [
+        {
+          "titulo": "Coca-Cola",
+          "descripcion": "Gaseosa sabor cola.",
+          "ingredientes": "Agua carbonatada, Azúcar, Colorante caramelo, Ácido fosfórico, Aromatizantes naturales",
+          "alergenos": "Fenilalanina",
+          "precio": "$8.000 (600ml)",
+          "img": "img/coca-cola.jpg"
+        },
+        {
+          "titulo": "Agua Saborizada",
+          "descripcion": "Agua saborizada línea Coca-Cola.",
+          "ingredientes": "Agua y jugo concentrado de frutas.",
+          "alergenos": "Lactosa, soya o fenilalanina",
+          "precio": "$5.000 (600ml)",
+          "img": "img/agua-saborizada.jpg"
+        }
+      ]
+    }
+  ]
+  
