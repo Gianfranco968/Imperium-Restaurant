@@ -23,9 +23,9 @@ export default function MobileMenu() {
     // Definición de los enlaces del menú
     const links = [
         { label: "Inicio", href: "#intro" },
+        { label: "Nosotros", href: "#acerca" },
         { label: "Menú", href: "#carta" },
-        { label: "Acerca de", href: "#acerca" },
-        { label: "Contacto", href: "#contacto" },
+        { label: "Contacto", href: "#contacto" }
     ];
 
     return (
