@@ -15,10 +15,10 @@ export default function MobileMenu() {
     };
 
     const links = [
-        { label: "Inicio", href: "/" },
-        { label: "Menú", href: "/menu" },
-        { label: "Acerca de", href: "/acerca" },
-        { label: "Contacto", href: "/contacto" },
+        { label: "Inicio", href: "#intro" },
+        { label: "Menú", href: "#carta" },
+        { label: "Acerca de", href: "#acerca" },
+        { label: "Contacto", href: "#contacto" },
     ];
 
     return (

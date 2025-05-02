@@ -11,7 +11,6 @@ const Intro = () => {
   return (
     <div className="intro" id="intro">
       <img src={brandLogo} alt="Logo del Restaurant" />
-      <span className="arrow">&#8595;</span>
     </div>
   );
 };
