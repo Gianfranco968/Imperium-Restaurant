@@ -32,6 +32,12 @@ body::before {
     z-index: -1;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
 /* ===========================
    LAYOUT GENERAL
 =========================== */
@@ -142,6 +148,40 @@ h3 {
     letter-spacing: 5px;
 }
 
+.mapa {
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.info {
+    text-align: left !important;
+    padding: 0px 30px 20px 30px;
+    color: #6d6d6d !important;
+}
+
+.info strong {
+    color: #444444;
+}
+
+.direccion .infoAdicional {
+    text-align: center !important;
+    margin-top: 20px;
+}
+
+.acerca_contenido img {
+    border-radius: 20px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.acerca_contenido p {
+    text-align: center;
+    font-size: 1.3rem !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 /* ===========================
    MENU MOBILE
 =========================== */
@@ -150,25 +190,25 @@ h3 {
     top: 1rem;
     right: 1rem;
     z-index: 50;
-  }
-  
-  .menu-toggle-button {
+}
+
+.menu-toggle-button {
     border-radius: 9999px;
     padding: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0,1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 1);
     border: none;
     cursor: pointer;
     background: none;
-  }
-  
-  .menu-backdrop {
+}
+
+.menu-backdrop {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 40;
-  }
-  
-  .menu-panel {
+}
+
+.menu-panel {
     position: fixed;
     top: 0;
     right: 0;
@@ -181,16 +221,17 @@ h3 {
     flex-direction: column;
     gap: 1.5rem;
     z-index: 50;
-  }
-  
-  .menu-nav {
+}
+
+.menu-nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 1.125rem; /* text-lg */
-  }
-  
-  .menu-link {
+    font-size: 1.125rem;
+    /* text-lg */
+}
+
+.menu-link {
     text-decoration: none;
     padding-bottom: 0.8rem;
     padding-top: 1rem;
@@ -204,11 +245,11 @@ h3 {
     margin-right: 1rem;
     text-transform: uppercase;
     color: black
-  }
-  
-  .menu-link:hover {
+}
+
+.menu-link:hover {
     text-decoration: underline;
-  }  
+}
 
 /* ===========================
    PRODUCTOS
@@ -229,7 +270,7 @@ h3 {
 .producto.izq {
     margin: 25px 0 0 7%;
     background-color: rgba(255, 223, 181, 0.6);
-    border-style: none;    
+    border-style: none;
 }
 
 .producto.der {
@@ -441,7 +482,7 @@ h3 {
     margin-left: 10%;
     z-index: 10;
 }
-  
+
 
 /* ===========================
    FOOTER
@@ -470,6 +511,17 @@ h3 {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.redes-sociales {
+    margin-bottom: 15px;
+}
+
+.redes-sociales a {
+    margin: 0 20px;
+    font-size: 1.5rem;
+    color: #a52a2a;
+    transition: color 0.3s ease;
 }
 
 /* ===========================
@@ -520,6 +572,7 @@ h3 {
     h2 {
         font-size: 1.5rem !important;
     }
+
     h3 {
         font-size: 1.5rem !important;
     }
@@ -542,11 +595,12 @@ h3 {
         padding-top: 8%;
         padding-bottom: 15%;
     }
+
     .producto.izq {
         margin: 25px 0 0 2%;
         background-color: rgba(255, 223, 181, 0.6);
     }
-    
+
     .producto.der {
         margin: 25px 0 0 -2%;
         background-color: rgba(255, 223, 181, 0.3);
@@ -568,6 +622,7 @@ h3 {
     .desc_plato {
         padding-left: 2%;
     }
+
     .desc_plato h3 {
         font-size: 1.6rem;
     }
@@ -580,7 +635,7 @@ h3 {
 
     .intro {
         padding-top: 50%;
-        padding-bottom: 20%;
+        padding-bottom: 50%;
     }
 }
 
@@ -597,19 +652,16 @@ h3 {
         width: 80%;
     }
 
-    .arrow {
-        padding-top: 70%;
-    }
-
     .intro {
         padding-top: 100%;
-        padding-bottom: 30%;
+        padding-bottom: 50%;
     }
+
     .producto.izq {
         margin: 25px 0 0 9%;
         background-color: rgba(255, 223, 181, 0.6);
     }
-    
+
     .producto.der {
         margin: 25px 0 0 -9%;
         background-color: rgba(255, 223, 181, 0.3);
@@ -621,14 +673,30 @@ h3 {
         width: 80%;
     }
 
-    .arrow {
-        padding-top: 30%;
-        font-size: 200px;
-    }
-
     .intro {
         padding-top: 20%;
-        padding-bottom: 20%;
+        padding-bottom: 120%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .intro {
+        padding-top: 15% !important;
+        padding-bottom: 20% !important;
+    }
+
+    .acerca_contenido {
+        display: flex;
+    }
+
+    .acerca_contenido p {
+        margin: 20px;
+        font-size: 1.5rem !important;
+    }
+
+    .acerca_contenido img {
+        width: 50%;
+        margin: 20px 20px 20px 20px;
     }
 }
 
@@ -638,12 +706,29 @@ h3 {
     }
 
     .arrow {
-        padding-top: 10% !important;
+        padding-top: 10%;
         font-size: 100px;
     }
 
     .intro {
-        padding-top: 5% !important;
-        padding-bottom: 0% !important;
+        padding-top: 5%;
+        padding-bottom: 70%;
+    }
+
+    .acerca_contenido {
+        display: flex;
+    }
+
+    .acerca_contenido img {
+        width: 50%;
+        margin: 20px 20px 20px 20px;
+    }
+    
+}
+
+@media screen and (min-height: 800px) and (max-width: 350px) {
+    .intro {
+        padding-top: 90% !important;
+        padding-bottom: 160%;
     }
 }
