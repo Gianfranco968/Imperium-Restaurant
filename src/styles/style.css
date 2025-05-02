@@ -92,6 +92,7 @@ main {
     border-style: initial;
 }
 
+/* Se ocultan elementos dentro de .categoria por defecto */
 .categoria .producto,
 .categoria .subcategoria,
 .categoria .separador {
@@ -100,6 +101,7 @@ main {
     transition: opacity 0.3s ease;
 }
 
+/* Cuando la categoría está abierta, se muestran los elementos */
 .categoria.abierta .producto,
 .categoria.abierta .subcategoria,
 .categoria.abierta .separador {
@@ -524,6 +526,11 @@ h3 {
     transition: color 0.3s ease;
 }
 
+.descripcion a {
+    text-decoration: none;
+    color: #6d6d6d;
+}
+
 /* ===========================
    MEDIA QUERIES
 =========================== */
@@ -646,7 +653,6 @@ h3 {
     }
 }
 
-
 @media screen and (max-width: 350px) {
     .intro img {
         width: 80%;
@@ -687,6 +693,7 @@ h3 {
 
     .acerca_contenido {
         display: flex;
+        align-items: center;
     }
 
     .acerca_contenido p {
@@ -717,13 +724,18 @@ h3 {
 
     .acerca_contenido {
         display: flex;
+        align-items: center;
+    }
+
+    .der{
+        flex-direction: row-reverse;
     }
 
     .acerca_contenido img {
         width: 50%;
         margin: 20px 20px 20px 20px;
     }
-    
+
 }
 
 @media screen and (min-height: 800px) and (max-width: 350px) {
