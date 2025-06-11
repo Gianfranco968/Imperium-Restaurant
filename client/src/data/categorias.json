@@ -1,0 +1,292 @@
+[
+  {
+    "titulo": "Entradas",
+    "lado": "izq",
+    "productos": [
+      {
+        "titulo": "Bruschetta",
+        "descripcion": "Pan crujiente con tomate, albahaca y ajo.",
+        "ingredientes": "Pan, tomate, albahaca, ajo, aceite de oliva.",
+        "alergenos": "Gluten",
+        "precio": "$35.000",
+        "img": "img/bruschetta.webp"
+      },
+      {
+        "titulo": "Empanada de Carne",
+        "descripcion": "Empanada rellena de carne de res, cebolla y especias.",
+        "ingredientes": "Carne de res, cebolla, masa de empanada, especias.",
+        "alergenos": "Gluten",
+        "precio": "$5.000",
+        "img": "img/empanada.png"
+      },
+      {
+        "titulo": "Tapas Variadas",
+        "descripcion": "Selección de tapas españolas acompañadas de salsas.",
+        "ingredientes": "Aceitunas, jamón, queso, pan, salsa alioli.",
+        "alergenos": "Gluten, lactosa",
+        "precio": "$28.000",
+        "img": "img/Tapas.webp"
+      },
+      {
+        "titulo": "Provoleta",
+        "descripcion": "Queso provolone fundido con orégano y un toque de chimichurri.",
+        "ingredientes": "Queso provolone, orégano, chimichurri.",
+        "alergenos": "Lactosa",
+        "precio": "$22.000",
+        "img": "img/provoleta.webp"
+      },
+      {
+        "titulo": "Tabla de Fiambres",
+        "descripcion": "Selección de fiambres y quesos con frutos secos y pan.",
+        "ingredientes": "Jamón crudo, salame, queso, nueces, pan.",
+        "alergenos": "Gluten, lactosa, frutos secos",
+        "precio": "$40.000",
+        "img": "img/tabla_fiambres.webp"
+      }
+    ]
+  },
+  {
+    "titulo": "Ensaladas",
+    "lado": "der",
+    "productos": [
+      {
+        "titulo": "Ensalada César",
+        "descripcion": "Lechuga fresca con aderezo césar y crutones.",
+        "ingredientes": "Lechuga, pollo, queso parmesano, crutones, aderezo césar.",
+        "alergenos": "Lactosa, gluten",
+        "precio": "$22.000",
+        "img": "img/ensalada-cesar.webp"
+      },
+      {
+        "titulo": "Ensalada Griega",
+        "descripcion": "Tomate, pepino, cebolla morada, aceitunas y queso feta.",
+        "ingredientes": "Tomate, pepino, cebolla morada, aceitunas, queso feta.",
+        "alergenos": "Lactosa",
+        "precio": "$17.000",
+        "img": "img/ensalada-griega.webp"
+      },
+      {
+        "titulo": "Ensalada de Rúcula",
+        "descripcion": "Rúcula, tomate cherry y vinagreta de mostaza.",
+        "ingredientes": "Rúcula, tomate cherry, mostaza, aceite de oliva.",
+        "alergenos": "Ninguno",
+        "precio": "$18.000",
+        "img": "img/ensalada-rucula.webp"
+      },
+      {
+        "titulo": "Ensalada Caprese",
+        "descripcion": "Mozzarella fresca, tomate y albahaca con aceite de oliva.",
+        "ingredientes": "Mozzarella, tomate, albahaca, aceite de oliva.",
+        "alergenos": "Lactosa",
+        "precio": "$20.000",
+        "img": "img/ensalada-caprese.webp"
+      },
+      {
+        "titulo": "Ensalada de Quinoa",
+        "descripcion": "Quinoa con vegetales asados y aderezo de limón.",
+        "ingredientes": "Quinoa, zanahoria, zucchini, pimiento, jugo de limón.",
+        "alergenos": "Ninguno",
+        "precio": "$24.000",
+        "img": "img/ensalada-quinoa.webp"
+      }
+    ]
+  },
+  {
+    "titulo": "Platos Principales",
+    "lado": "izq",
+    "productos": [
+      {
+        "titulo": "Solomillo a la parrilla",
+        "descripcion": "Jugoso solomillo acompañado de papas rústicas.",
+        "ingredientes": "Solomillo de res, papas, especias.",
+        "alergenos": "Ninguno",
+        "precio": "$33.500",
+        "img": "img/solomillo.webp"
+      },
+      {
+        "titulo": "Bife de Chorizo",
+        "descripcion": "Bife de chorizo a la parrilla acompañado de vegetales.",
+        "ingredientes": "Bife de chorizo, zanahoria, brócoli, papas.",
+        "alergenos": "Ninguno",
+        "precio": "$36.500",
+        "img": "img/bife.webp"
+      },
+      {
+        "titulo": "Suprema de Pollo en Salsa de Mostaza y Miel",
+        "descripcion": "Suprema de pollo a la plancha bañada en salsa de mostaza y miel.",
+        "ingredientes": "Pechuga de pollo, mostaza, miel, crema, papas, espárragos, manteca.",
+        "alergenos": "Lácteos",
+        "precio": "$27.000",
+        "img": "img/suprema.webp"
+      },
+      {
+        "titulo": "Filete de salmón con arroz basmati",
+        "descripcion": "Salmón, sésamo, arroz basmati, zanahoria, morrón, cebolla, salsa teriyaki.",
+        "ingredientes": "Pechuga de pollo, mostaza, miel, crema, papas, espárragos, manteca.",
+        "alergenos": "Pescado, sésamo, soja",
+        "precio": "$38.000",
+        "img": "img/salmon.webp"
+      },
+      {
+        "titulo": "Risotto de Hongos",
+        "descripcion": "Cremoso risotto con variedad de hongos y queso parmesano.",
+        "ingredientes": "Arroz arborio, champiñones, portobellos, cebolla, queso parmesano, vino blanco.",
+        "alergenos": "Lactosa",
+        "precio": "$30.000",
+        "img": "img/risotto.webp"
+      }
+    ]
+  },
+  {
+    "titulo": "Pastas",
+    "lado": "der",
+    "productos": [
+      {
+        "titulo": "Spaghetti Carbonara",
+        "descripcion": "Pasta con salsa cremosa de huevo y panceta.",
+        "ingredientes": "Pasta, huevo, panceta, queso parmesano.",
+        "alergenos": "Gluten, lactosa",
+        "precio": "$33.500",
+        "img": "img/carbonara.webp"
+      },
+      {
+        "titulo": "Lasaña",
+        "descripcion": "Lasaña casera con carne molida y salsa bechamel.",
+        "ingredientes": "Carne molida, pasta, salsa bechamel, queso.",
+        "alergenos": "Gluten, lactosa",
+        "precio": "$35.000",
+        "img": "img/lasagna.webp"
+      },
+      {
+        "titulo": "Fettuccine al Pesto",
+        "descripcion": "Fettuccine con salsa de pesto casera y piñones.",
+        "ingredientes": "Fettuccine, albahaca, ajo, piñones, queso parmesano, aceite de oliva.",
+        "alergenos": "Gluten, lactosa, frutos secos",
+        "precio": "$32.000",
+        "img": "img/fettuccine-pesto.webp"
+      },
+      {
+        "titulo": "Ravioles de Ricotta y Espinaca",
+        "descripcion": "Ravioles caseros rellenos de ricotta y espinaca con salsa pomodoro.",
+        "ingredientes": "Ricotta, espinaca, pasta, salsa de tomate, albahaca.",
+        "alergenos": "Gluten, lactosa",
+        "precio": "$34.000",
+        "img": "img/ravioles-ricotta.webp"
+      }
+    ]
+  },
+  {
+    "titulo": "Postres",
+    "lado": "izq",
+    "productos": [
+      {
+        "titulo": "Tiramisú",
+        "descripcion": "Delicioso postre italiano con café y cacao.",
+        "ingredientes": "Mascarpone, café, bizcocho, cacao.",
+        "alergenos": "Gluten, lactosa",
+        "precio": "$17.000",
+        "img": "img/tiramisu.webp"
+      },
+      {
+        "titulo": "Mousse de Chocolate",
+        "descripcion": "Suave mousse de chocolate amargo con crema.",
+        "ingredientes": "Chocolate, crema, azúcar.",
+        "alergenos": "Lactosa",
+        "precio": "$10.000",
+        "img": "img/mousse.webp"
+      },
+      {
+        "titulo": "Cheesecake de Frutos Rojos",
+        "descripcion": "Tarta cremosa de queso con cobertura de frutos rojos.",
+        "ingredientes": "Queso crema, galletas, frutos rojos, azúcar.",
+        "alergenos": "Gluten, lactosa",
+        "precio": "$16.000",
+        "img": "img/cheesecake.webp"
+      },
+      {
+        "titulo": "Flan Casero con Dulce de Leche",
+        "descripcion": "Clásico flan argentino con dulce de leche y crema.",
+        "ingredientes": "Huevos, leche, azúcar, dulce de leche.",
+        "alergenos": "Lactosa",
+        "precio": "$12.000",
+        "img": "img/flan.webp"
+      }
+    ]
+  },
+  {
+    "titulo": "Bebidas Alcohólicas",
+    "lado": "der",
+    "productos": [
+      {
+        "titulo": "Vino Malbec",
+        "descripcion": "Vino tinto de uvas Malbec.",
+        "ingredientes": "Uvas Malbec.",
+        "alergenos": "Sulfitos",
+        "precio": "$11.000 (copa)",
+        "img": "img/vino-malbec.webp"
+      },
+      {
+        "titulo": "Cerveza Artesanal",
+        "descripcion": "Cerveza artesanal de estilo IPA.",
+        "ingredientes": "Cebada, lúpulo, agua, levadura.",
+        "alergenos": "Gluten",
+        "precio": "$9.000 (pinta)",
+        "img": "img/cerveza-artesanal.png"
+      },
+      {
+        "titulo": "Fernet con Cola",
+        "descripcion": "Clásico argentino con Fernet y bebida cola.",
+        "ingredientes": "Fernet, bebida cola, hielo.",
+        "alergenos": "Ninguno",
+        "precio": "$10.000 (vaso)",
+        "img": "img/fernet-cola.webp"
+      },
+      {
+        "titulo": "Negroni",
+        "descripcion": "Trago italiano con gin, vermut rosso y Campari.",
+        "ingredientes": "Gin, vermut rosso, Campari, rodaja de naranja.",
+        "alergenos": "Ninguno",
+        "precio": "$13.000",
+        "img": "img/negroni.webp"
+      }
+    ]
+  },
+  {
+    "titulo": "Bebidas Sin Alcohol",
+    "lado": "izq",
+    "productos": [
+      {
+        "titulo": "Coca-Cola",
+        "descripcion": "Gaseosa sabor cola.",
+        "ingredientes": "Agua carbonatada, Azúcar, Colorante caramelo, Ácido fosfórico, Aromatizantes naturales",
+        "alergenos": "Fenilalanina",
+        "precio": "$8.000 (600ml)",
+        "img": "img/coca-cola.webp"
+      },
+      {
+        "titulo": "Agua Saborizada",
+        "descripcion": "Agua saborizada línea Coca-Cola.",
+        "ingredientes": "Agua y jugo concentrado de frutas.",
+        "alergenos": "Lactosa, soya o fenilalanina",
+        "precio": "$5.000 (600ml)",
+        "img": "img/agua-saborizada.webp"
+      },
+      {
+        "titulo": "Jugo Natural de Naranja",
+        "descripcion": "Jugo exprimido 100% natural.",
+        "ingredientes": "Naranja exprimida.",
+        "alergenos": "Ninguno",
+        "precio": "$6.500 (vaso)",
+        "img": "img/jugo-naranja.webp"
+      },
+      {
+        "titulo": "Limonada con Menta y Jengibre",
+        "descripcion": "Refrescante limonada casera con menta y jengibre.",
+        "ingredientes": "Limón, agua, azúcar, menta, jengibre.",
+        "alergenos": "Ninguno",
+        "precio": "$7.000 (vaso)",
+        "img": "img/limonada-menta.webp"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1257 @@
+/* ===========================
+   RESET Y BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   LAYOUT GENERAL
+=========================== */
+main {
+    padding: 0 20px;
+    overflow-y: auto;
+}
+
+.menu {
+    background-color: rgb(250, 235, 215, 80%);
+    margin: 50px auto;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    max-width: 1200px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #d4af37;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.header h1:hover {
+    text-shadow: 0 0 15px #d4af37;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #bbb;
+}
+
+/* ===========================
+   CATEGORÍAS Y TÍTULOS
+=========================== */
+.categoria {
+    width: 100%;
+    margin: 20px auto;
+    border-color: #ff7f50;
+    border-style: initial;
+}
+
+/* Se ocultan elementos dentro de .categoria por defecto */
+.categoria .producto,
+.categoria .subcategoria,
+.categoria .separador {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Cuando la categoría está abierta, se muestran los elementos */
+.categoria.abierta .producto,
+.categoria.abierta .subcategoria,
+.categoria.abierta .separador {
+    display: block;
+    opacity: 1;
+}
+
+.categoria:not(.abierta) .producto {
+    display: none;
+}
+
+.categoria.abierta .producto {
+    display: block;
+}
+
+
+h2 {
+    color: brown;
+    border-bottom: 2px solid brown;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: darkslategray;
+    font-size: 2rem !important;
+}
+
+.subcategoria {
+    font-size: 2rem;
+    color: darkslategray;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+    color: brown;
+    border-bottom: 2px solid brown;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.mapa {
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.info {
+    text-align: left !important;
+    padding: 0px 30px 20px 30px;
+    color: #6d6d6d !important;
+}
+
+.info strong {
+    color: #444444;
+}
+
+.direccion .infoAdicional {
+    text-align: center !important;
+    margin-top: 20px;
+}
+
+.acerca_contenido img {
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 75%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.acerca_contenido p {
+    text-align: center;
+    font-size: 1.3rem !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.boton_menu_info {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.lucide-menu {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.subir {
+    position: fixed;
+    bottom: -20px;
+    right: -120px;
+    z-index: 1000;
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.subir:hover {
+    transform: scale(1.1);
+}
+
+
+.boton_volver {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ===========================
+   MENU MOBILE
+=========================== */
+.menu-toggle-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+}
+
+.menu-toggle-button {
+    border-radius: 9999px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 1);
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: black;
+}
+
+.menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    background-color: rgb(250, 235, 215, 1);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 50;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.125rem;
+    /* text-lg */
+}
+
+.menu-link {
+    text-decoration: none;
+    padding-bottom: 0.8rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    text-align: left;
+    transition: text-decoration 0.2s ease;
+    border-color: rgb(153, 153, 153);
+    border-bottom-style: solid;
+    border-width: 1px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    color: black
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   PRODUCTOS
+=========================== */
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border-color: rgb(222, 184, 135) !important;
+    border-style: solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.producto.izq {
+    margin: 25px 0 0 7%;
+    background-color: rgba(255, 223, 181, 0.6);
+    border-style: none;
+}
+
+.producto.der {
+    margin: 25px 0 0 -7%;
+    background-color: rgba(255, 223, 181, 0.3);
+}
+
+.producto-imagen {
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.descripcion {
+    font-style: italic;
+    color: darkgreen;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.precio {
+    font-size: 2rem;
+    color: darkolivegreen;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.infoAdicional {
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 2rem;
+    padding-right: 5%;
+    color: darkslategray;
+}
+
+.infoAdicional strong {
+    color: #a52a2a;
+}
+
+/* ===========================
+   CONTENIDO DE LOS PLATOS
+=========================== */
+#plato {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.plato-contenido {
+    background-color: rgb(255, 228, 196);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    animation: aparecer 0.3s ease-out;
+}
+
+.plato-contenido h3 {
+    padding-bottom: 5%;
+    font-size: 2rem;
+    color: darkgreen;
+}
+
+.plato-contenido p {
+    font-size: 1.3rem;
+}
+
+.plato-contenido img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.descripcionDetalle {
+    margin-top: 5% !important;
+    font-size: 1.5rem !important;
+    color: darkgreen;
+}
+
+.precioDetalle {
+    margin-top: 5% !important;
+    font-size: 2rem !important;
+    color: darkolivegreen;
+}
+
+.ingredientesDetalle {
+    margin-top: 5% !important;
+    text-align: left !important;
+    color: darkslategray;
+}
+
+.alergenoDetalle {
+    text-align: left !important;
+    color: darkslategray;
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===========================
+   IMAGEN AMPLIADA
+=========================== */
+.imagen-ampliada {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#imagen-grande {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* ===========================
+   INTRO ANIMADA
+=========================== */
+.intro {
+    opacity: 0;
+    padding-top: 70% !important;
+    transform: translateY(-20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.arrow {
+    padding-top: 60%;
+    padding-bottom: 30%;
+    font-size: 100px !important;
+    color: hsla(0, 0%, 0%, 0.500);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro img {
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===========================
+   BOTONES CATEGORÍA
+=========================== */
+
+.categoria_boton.izq {
+    background-color: rgb(222, 184, 135, 0.5);
+    border-radius: 0 25px 25px 0;
+    text-align: right;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 40px;
+    margin-right: 10%;
+    z-index: 10;
+}
+
+.categoria_boton.der {
+    border-style: solid;
+    border-color: rgb(222, 184, 135);
+    border-radius: 25px 0 0 25px;
+    text-align: left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 40px;
+    margin-left: 10%;
+    z-index: 10;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    margin: 20px auto;
+}
+
+.footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #a52a2a;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales {
+    margin-bottom: 15px;
+}
+
+.redes-sociales a {
+    margin: 0 20px;
+    font-size: 1.5rem;
+    color: #a52a2a;
+    transition: color 0.3s ease;
+}
+
+.descripcion a {
+    text-decoration: none;
+    color: #6d6d6d;
+}
+
+/* ===========================
+   MEDIA QUERIES
+=========================== */
+@media (max-width: 768px) {
+    .producto {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .producto-imagen {
+        width: 120px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .precio {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .producto-imagen {
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .precio {
+        font-size: 1.1rem !important;
+    }
+
+    .descripcion {
+        font-size: 1.2rem !important;
+    }
+
+    .infoAdicional {
+        font-size: 1.2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .subcategoria {
+        padding-left: 15% !important;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+}
+
+@media screen and (min-width: 500px) {
+    .intro img {
+        width: 500px;
+    }
+
+    .intro {
+        padding-top: 8%;
+        padding-bottom: 15%;
+    }
+
+    .producto.izq {
+        margin: 25px 0 0 2%;
+        background-color: rgba(255, 223, 181, 0.6);
+    }
+
+    .producto.der {
+        margin: 25px 0 0 -2%;
+        background-color: rgba(255, 223, 181, 0.3);
+    }
+
+    .contenido {
+        display: flex !important;
+    }
+
+    .orden {
+        flex-direction: row-reverse !important;
+    }
+
+    .izquierda {
+        padding-right: 2%;
+        padding-left: 0%;
+    }
+
+    .desc_plato {
+        padding-left: 2%;
+    }
+
+    .desc_plato h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .intro img {
+        width: 90%;
+    }
+
+    .intro {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .arrow {
+        padding-top: 40%;
+        padding-bottom: 0%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .intro img {
+        width: 80%;
+    }
+
+    .intro {
+        padding-top: 100%;
+        padding-bottom: 50%;
+    }
+
+    .producto.izq {
+        margin: 25px 0 0 9%;
+        background-color: rgba(255, 223, 181, 0.6);
+    }
+
+    .producto.der {
+        margin: 25px 0 0 -9%;
+        background-color: rgba(255, 223, 181, 0.3);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .intro img {
+        width: 80%;
+    }
+
+    .intro {
+        padding-top: 20%;
+        padding-bottom: 120%;
+    }
+
+    .acerca_contenido img {
+        width: 65%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .intro {
+        padding-top: 20% !important;
+        padding-bottom: 20% !important;
+    }
+
+    .acerca_contenido {
+        display: flex;
+        align-items: center;
+    }
+
+    .acerca_contenido p {
+        margin: 20px;
+        font-size: 1.5rem !important;
+    }
+
+    .acerca_contenido img {
+        width: 60%;
+        margin: 20px 20px 20px 20px;
+    }
+
+    .menu-panel {
+        width: 20% !important;
+    }
+
+    .subir {
+        bottom: 0px;
+        right: -750px !important;
+        border-color: none !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .intro img {
+        width: 600px;
+    }
+
+    .arrow {
+        padding-top: 10%;
+        font-size: 100px;
+    }
+
+    .intro {
+        padding-top: 5%;
+        padding-bottom: 70%;
+    }
+
+    .acerca_contenido {
+        display: flex;
+        align-items: center;
+    }
+
+    .der {
+        flex-direction: row-reverse;
+    }
+
+    .acerca_contenido img {
+        width: 300px;
+        height: auto;
+        margin: 20px 20px 20px 20px;
+    }
+
+    .menu-panel {
+        width: 50%;
+    }
+
+
+}
+
+@media screen and (min-height: 800px) and (max-width: 350px) {
+    .intro {
+        padding-top: 90% !important;
+        padding-bottom: 160%;
+    }
+}
+
+@media screen and (min-width:500px) {
+
+    .menu-panel {
+        width: 50%;
+    }
+
+
+}
+
+/* ===========================
+   SECCION ADMIN - Estilos base (Mobile First)
+=========================== */
+
+input,
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+input {
+    border: 2px solid brown;
+    padding-left: 10px;
+    border-radius: 8px;
+    background-color: #fffaf0;
+}
+
+/* button {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 300px !important;
+    margin-left: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} */
+
+button:hover {
+    background-color: none;
+}
+
+.logout-btn,
+.back-btn {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.usuarios-list,
+.usuarios-individuales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.tabla-usuarios-titulo,
+.tabla-usuarios-fila {
+    font-size: 1.3rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+    padding: 10px;
+    font-size: 1.2rem;
+    min-width: 150px;
+    text-align: center;
+}
+
+.tabla-platos-titulo,
+.tabla-platos-fila {
+    font-size: 1.3rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.tabla-platos {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-platos th,
+.tabla-platos td {
+    padding: 10px;
+    font-size: 1.2rem;
+    min-width: 150px;
+    text-align: center;
+}
+
+.listar-usuarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#message {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.titulo {
+    border-radius: 8px;
+    color: black;
+    width: 95%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.bloques-titulo {
+    color: black;
+}
+
+.success {
+    color: darkgreen;
+}
+
+.error {
+    color: crimson;
+}
+
+.admin-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.admin-card {
+    width: 90%;
+    background-color: #fffaf0;
+    border: 2px solid brown;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.admin-card h2 {
+    font-size: 1.3rem;
+    color: brown;
+    margin-bottom: 10px;
+}
+
+.admin-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.admin-subpanel {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 250, 240, 0.5);
+    border: 2px solid brown;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 20px 10px;
+}
+
+.formCrearUsuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.selectCrearUsuario {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 2px solid brown;
+    border-radius: 8px;
+    background-color: rgba(255, 250, 240, 0.5);
+}
+
+.bienvenida {
+    font-size: 2rem !important;
+    color: brown;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.li {
+    font-size: 1.2rem;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.deleteUser {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    margin-left: 20px !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deletePlato {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    max-width: 120px;
+    margin-left: 30px !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.guardarCambios {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.crearUsuario {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.crearPlato {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* ===========================
+   MEDIA QUERIES PARA SECCIÓN ADMIN
+=========================== */
+@media screen and (min-width: 768px) {
+
+    input,
+    button {
+        width: 90%;
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .logout-btn,
+    .back-btn {
+        font-size: 1.5rem;
+        width: 200px;
+    }
+
+    .admin-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .admin-card {
+        flex: 1 1 calc(33% - 20px);
+        margin: 0 30px;
+        max-width: none;
+    }
+
+    .selectCrearUsuario {
+        width: 25%;
+    }
+
+    .tabla-usuarios th,
+    .tabla-usuarios td {
+        padding: 10px 100px;
+        font-size: 1.5rem;
+        width: 260px;
+    }
+
+    .tabla-platos th,
+    .tabla-platos td {
+        padding: 10px 0px;
+        font-size: 1.5rem;
+        width: 180px;
+    }
+
+    .usuarios-individuales {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .deleteUser {
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 2rem !important;
+    }
+
+    .admin-subpanel {
+        padding: 15px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 250, 240, 0.95);
+        /* más sólido para mejor contraste */
+    }
+
+    .bienvenida {
+        font-size: 1.7rem !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .admin-card {
+        width: 85%;
+        max-width: none;
+    }
+
+    .admin-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .admin-card p {
+        font-size: 0.95rem;
+    }
+
+    .button {
+        margin-left: 0px !important;
+    }
+
+    button,
+    .logout-btn,
+    .back-btn {
+        font-size: 1rem;
+        padding: 14px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        width: 85%;
+        border-radius: 10px;
+    }
+
+    .tabla-platos th,
+    .tabla-platos td {
+        padding: 5px 0px;
+        font-size: 10px !important;
+        width: 80px !important;
+        min-width: 60px;
+    }
+
+    .tabla-platos-titulo,
+    .tabla-platos-fila {
+        font-size: 1rem;
+        display: flex;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .tabla-platos {
+        width: 100px;
+        overflow-x: auto;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .selectCrearUsuario {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .deleteUser {
+        margin: 0px;
+    }
+
+    .usuarios-individuales {
+        margin-bottom: 30px;
+    }
+
+    .datos {
+        width: 85%;
+    }
+
+    .form {
+        margin-top: 20px;
+    }
+
+    .ingresar {
+        margin-top: 20px;
+    }
+}
